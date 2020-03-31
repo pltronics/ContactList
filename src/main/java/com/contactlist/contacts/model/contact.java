@@ -8,21 +8,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class contact {
+public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer contact_id;
+    private int contact_id;
     private String firstname;
     private String lastname;
     private String email;
     private String company;
     private Date datestarted;
     private Boolean active;
+    private Integer worknumber;
+    private Integer exten;
+    private Integer companynumber;
 
-    public Integer getId() {
+    public int getId() {
         return contact_id;
     }
-    public void setId(Integer contact_id) {
+    public void setId(int contact_id) {
         this.contact_id = contact_id;
     }
 
@@ -74,9 +77,33 @@ public class contact {
 
     @Override
     public String toString() {
-        return getId().toString() + " " + firstname + " " + lastname + " " + 
-                email + " " + company + " " + datestarted.toString() + " " + 
-                active.toString();
+        return contact_id + " " + firstname + " " + lastname + " " + 
+                email + " " + company + " " + datestarted + " " + 
+                active;
+    }
+
+    public Integer getWorknumber() {
+        return worknumber;
+    }
+
+    public void setWorknumber(Integer worknumber) {
+        this.worknumber = worknumber;
+    }
+
+    public Integer getExten() {
+        return exten;
+    }
+
+    public void setExten(Integer exten) {
+        this.exten = exten;
+    }
+
+    public Integer getCompanynumber() {
+        return companynumber;
+    }
+
+    public void setCompanynumber(Integer companynumber) {
+        this.companynumber = companynumber;
     }
 
 
