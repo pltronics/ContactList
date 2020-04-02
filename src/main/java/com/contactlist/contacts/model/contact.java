@@ -2,36 +2,37 @@ package com.contactlist.contacts.model;
 
 import java.sql.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
 
 @Entity
+@Table(name="contacts")
 public class Contact {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "contact_id")
+    @Column(name="contact_id")
     private int contact_id;
-    @Column(name = "firstname")
+    @Column(name="firstname")
     private String firstname;
-    @Column(name = "lastname")
+    @Column(name="lastname")
     private String lastname;
-    @Column(name = "email")
+    @Column(name="email")
     private String email;
-    @Column(name = "company")
+    @Column(name="company")
     private String company;
-    @Column(name = "datestarted")
+    @Column(name="datestarted")
     private Date datestarted;
-    @Column(name = "active")
+    @Column(name="active")
     private Boolean active;
-    @Column(name = "worknumber")
+    @Column(name="worknumber")
     private Integer worknumber;
-    @Column(name = "exten")
+    @Column(name="exten")
     private Integer exten;
-    @Column(name = "companynumber")
+    @Column(name="companynumber")
     private Integer companynumber;
 
     public int getId() {
