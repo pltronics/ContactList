@@ -6,4 +6,5 @@ public interface IContactDAO {
     
     public Contact fetch(String searchString);
     public Contact fetchById(int id);
+	public Iterable<Contact> fetchAllContacts();
 }

@@ -21,10 +21,10 @@ public class ContactController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
-        Contact contact = contactService.fetchById(1);
+        Iterable<Contact> contacts = contactService.fetchAllContacts();
         try {
             modelAndView.setViewName("home");
-            modelAndView.addObject("message", contact);
+            modelAndView.addObject("message", contacts);
         } catch(Exception e) {
             e.printStackTrace();
             modelAndView.setViewName("error");

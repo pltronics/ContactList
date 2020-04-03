@@ -8,4 +8,6 @@ public interface IContactService {
     public Contact fetchById(int id);
 
     public void save(Contact contact);
+
+	public Iterable<Contact> fetchAllContacts();
 }

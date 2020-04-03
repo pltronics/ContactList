@@ -1,16 +1,16 @@
 package com.contactlist.contacts.service;
 
-import com.contactlist.contacts.dao.ContactDAO;
+import com.contactlist.contacts.dao.IContactDAO;
 import com.contactlist.contacts.model.Contact;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ContactService implements IContactService{
+public class ContactService implements IContactService {
 
     @Autowired
-    ContactDAO contactDAO;
+    IContactDAO contactDAO;
 
     @Override
     public Contact fetchById(int id) {
@@ -20,6 +20,11 @@ public class ContactService implements IContactService{
     @Override
     public void save(Contact contact) {
 
+    }
+
+    @Override
+    public Iterable<Contact> fetchAllContacts() {
+        return contactDAO.fetchAllContacts();
     }
 
 }

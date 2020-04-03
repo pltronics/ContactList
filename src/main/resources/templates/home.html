@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<div th:text = "${message}"></div>
+<div Id="mylist">
+    <ul class="list-group" th:each="contact : ${message}">
+        <li class="list-group-item"> <span th:text="${contact.firstName}"> </span><a href="/add"> add</a></li>
+    </ul>
+</div>
 </html>
