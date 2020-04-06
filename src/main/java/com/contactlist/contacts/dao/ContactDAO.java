@@ -1,7 +1,5 @@
 package com.contactlist.contacts.dao;
 
-import java.util.List;
-
 import com.contactlist.contacts.model.Contact;
 
 import org.springframework.beans.factory.annotation.Autowired;

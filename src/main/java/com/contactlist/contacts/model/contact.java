@@ -26,6 +26,8 @@ public class Contact {
     private String company;
     @Column(name="datestarted")
     private Date datestarted;
+    @Column(name = "mobilenumber")
+    private Integer mobilenumber;
     @Column(name="active")
     private Boolean active;
     @Column(name="worknumber")
@@ -95,11 +97,11 @@ public class Contact {
                 active;
     }
 
-    public Integer getWorknumber() {
+    public Integer getWorkNumber() {
         return worknumber;
     }
 
-    public void setWorknumber(Integer worknumber) {
+    public void setWorkNumber(Integer worknumber) {
         this.worknumber = worknumber;
     }
 
@@ -111,12 +113,20 @@ public class Contact {
         this.exten = exten;
     }
 
-    public Integer getCompanynumber() {
+    public Integer getCompanyNumber() {
         return companynumber;
     }
 
-    public void setCompanynumber(Integer companynumber) {
+    public void setCompanyNumber(Integer companynumber) {
         this.companynumber = companynumber;
+    }
+
+    public Integer getMobileNumber() {
+        return mobilenumber;
+    }
+
+    public void setMobileNumber(Integer mobilenumber) {
+        this.mobilenumber = mobilenumber;
     }
 
 
